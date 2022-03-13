@@ -30,5 +30,17 @@ namespace MoodAnalyzerTest
             var actual = mood.Mood(message);
             Assert.AreEqual(excepted, actual);
         }
+        [TestMethod]
+        [TestCategory(null)]
+        public void GivenMessageShouldReturnHappyIfNull()
+        {
+            //Follow AAA strategy
+            ///Arrange , Act and in last Assert
+            Analyzer mood = new Analyzer();
+            string message = "";
+            string excepted = "happy";
+            var actual = mood.Mood(message);
+            Assert.AreEqual(excepted, actual);
+        }
     }
 }
